@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Esparrago Verde de Tiétar</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/landing-page.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' %}" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Cabecera -->
+    <header class="intro-header">
+        <nav class="navbar navbar-default navbar-fixed-top topnav navbar-static-top" role="navigation">
+            <div class="container topnav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Menú</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand topnav" href="#">Inicio</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="#modalContacto" data-toggle="modal">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Reina del Tiétar</h1>                
+                        <h3>Espárrago verde</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Fin cabecera -->
+
+    <!-- Cuerpo principal -->
+    <main>
+        <section class="content-section-a">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Quienes somos</h2>
+                        <p class="lead">Somos una empresa familiar bajo el nombre de <strong>Reipra</strong>. Nacemos gracias a nuestro amor por el trabajo bien hecho, con el fin de ver producir en nuestras tierras, un producto de calidad</p>
+                        <p class="lead">Las condiciones de climatología y situación, propia y exclusiva del <strong>Valle del Tiétar</strong>, hace que nuestro producto, sea distinguido en el mercado, por su sabor y calidad</p>
+                        <p class="lead">Estamos presentes en multitud de restaunates, fruterías y mercados nacionales, como Merca-Madrid</p>
+                        <p class="lead">Nuestro modelo de producción, es una combinación de agricultura tradicional y mejora tecnológica contínua, apostando siempre por el medio rural y por la tierra como medio de vida</p>
+                    </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                        <img class="img-responsive" src="{% static 'img/esparragos4.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="content-section-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Pasión por la calidad</h2>
+                        <p class="lead">Más de 40 años, trabajando para ofrecer los mejores productos y servicios!</p>
+                        <p class="lead"><strong>Conviene resaltar que nuestra producción de espárragos puede llegar al consumidor a las 24 horas de haber sido recolectado, totalmente frescos, libres de intermediarios y a precios inmejorables.</strong></p>
+                    </div>
+                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                        <img class="img-responsive" src="{% static 'img/esparragos5.jpg' %}" alt="Manojo de esparragos">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section-a">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading text-center">Producción artesanal</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card text-center">
+                            <img class="card-img-top img-rounded" src="{% static 'img/campo300x225.jpg' %}" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Campo</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card text-center">
+                            <img class="card-img-top img-rounded" src="{% static 'img/caja-esparragos300x225.jpg' %}" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Recogida</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi /p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card text-center">
+                            <img class="card-img-top img-rounded" src="{% static 'img/esparragos300x225.jpg' %}" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Producto</h3>
+                                <p class="card-text">Nuestro producto, es seleccionado como primera categoría y calibre 8/10
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-success">Saber más!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section class="content-section-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-sm-6 col-sm-offset-3">
+                        <h2>Formulario de contacto</h2>
+                        <h3>Escríbanos y nos pondremos en contacto con usted</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="texto">Texto</label>
+                                <textarea name="texto" class="form-control" id="texto" rows="5" placeholder="Comentario"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" required>Antes de enviar tu información, lee y acepta la <a href="#collapseLey" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLey">Información básica sobre la Ley de Protección de Datos</a>  
+                                </label>
+                                <div class="collapse panel-collapse" id="collapseLey" aria-labelledby="headingOne">
+                                    <div class="panel-body collapse.in">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam quam voluptatem blanditiis tempore assumenda nisi nam sint deserunt odio, eius at odit ratione voluptatibus dolorum maiores sunt molestias veniam?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                            </div>                     
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Fin formulaio de contacto -->
+
+        <!-- Peticion Modal -->
+        <div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Formulario de contacto</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Escríbenos y nos pondremos en contacto con usted</h4>
+                        <form action="#">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="texto">Texto</label>
+                                <textarea name="texto" class="form-control" id="texto" rows="5" placeholder="Comentario"></textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" required>Antes de enviar tu información, lee y acepta la <a href="#collapseLey" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLey">Información básica sobre la Ley de Protección de Datos</a>  
+                                </label>
+                                <div class="collapse panel-collapse" id="collapseLey" aria-labelledby="headingOne">
+                                    <div class="panel-body collapse.in">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aliquam quam voluptatem blanditiis tempore assumenda nisi nam sint deserunt odio, eius at odit ratione voluptatibus dolorum maiores sunt molestias veniam?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                            </div>                     
+                        </form>
+                    </div>              
+                </div>
+            </div>
+        </div>
+        <!-- Fin petición modal -->
+
+    </main>
+    <!-- Fin cuerpo principal -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Valle del Tiétar (Cáceres - España)</h2>
+                    <h3>Hortícolas Reipra S.L.</h3>
+                    <p>Polígono Industrial Campo Arañuelo, Calle A, parcela I</p>
+                    <p>10300 - Navalmoral de la Mata (Cáceres)</p>
+                    <p>Teléfono: 659166759</p>
+                    <p>CIF B-10.498.053</p>
+                    <p>R.G.S.A. 21.17218/CC</p>
+                    <p class="copyright">Imágen header <a href="https://pixabay.com/es/service/license/">Pixabay License</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin del footer -->
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
