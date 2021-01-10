@@ -40,10 +40,29 @@ h6 {
     height: 50%;
 }
 
+.sub-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 80px;
+    text-align: left;
+    color: #f8f8f8;
+    background: url(../img/intro-bg2.jpg) no-repeat;
+    background-color: #31613b ;
+    background-size: cover;
+    height: 30%;
+}
+
 .intro-message > h1 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 9em;
+    color: #c5faa3;
+    padding-top: 40px;
+}
+
+.sub-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
     color: #c5faa3;
     padding-top: 40px;
 }
@@ -60,6 +79,12 @@ h6 {
     color: #c5faa3;
 }
 
+.sub-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size:2em;
+    color: #c5faa3;
+}
+
 .card {
     margin-top: 20px;
 }
@@ -68,45 +93,70 @@ h6 {
     margin-top: 40px;
 }
 
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-
-    .intro-message > h1 {
-        font-size: 3em;
-    }
-
-    .intro-message > h3 {
-        font-size: 2em;
-    }
-
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-
-    .intro-divider {
-        width: 100%;
-    }
-}
 
 @media(max-width:991px) {
     .intro-message {
         padding-bottom: 15%;
     }
+    
+    .sub-message {
+        padding-bottom: 15%;
+    }
+    
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+    
+    .sub-message > h1 {
+        font-size: 2.5em;
+    }
+    
+    .intro-message > h3 {
+        font-size: 2em;
+    }
+    
+    .sub-message > h3 {
+        font-size: 1.5em;
+    }
+    
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .sub-message {
+        padding-bottom: 15%;
+    }
 
     .intro-message > h1 {
         font-size: 3em;
     }
 
+    .sub-message > h1 {
+        font-size: 2em;
+    }
+
     .intro-message > h3 {
         font-size: 2em;
+    }
+
+    .sub-message > h3 {
+        font-size: 1em;
     }
 
     ul.intro-social-buttons > li {
@@ -122,6 +172,7 @@ h6 {
     .intro-divider {
         width: 100%;
     }
+
 }
 
 .network-name {

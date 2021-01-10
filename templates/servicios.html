@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block header %}
+    <header class="sub-header">
+        
+        {% include 'navbar.html' %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sub-message">
+                        <h1>Reina del Tiétar</h1>                
+                        <h3>Espárrago verde</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+{% endblock header %}
+
+
+{% block main %}
+<section class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Datos enviados correctamente</h2>
+                <p class="lead">Sus datos se han grabado perfectamente, en breve, nos pondremos en contacto con usted</p>              
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 col-sm-6">
+                <a class="btn btn-success" href="{% url 'index' %}">Volver al inicio</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main %}
+    

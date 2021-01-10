@@ -20,5 +20,7 @@ from landing import views as landing_views
 
 urlpatterns = [
     path('', landing_views.index_view, name='index'),
+    path('servicios/', landing_views.servicios, name='servicios'),
+    path('peticion/', landing_views.peticion, name='peticion'),
     path('admin/', admin.site.urls),
 ]
