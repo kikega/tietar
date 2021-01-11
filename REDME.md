@@ -1,2 +1,0 @@
-# tietar
-Reina del Tiétar

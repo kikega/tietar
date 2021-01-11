@@ -12,6 +12,14 @@ def servicios(request):
     return render(request, 'servicios.html')
 
 
+def produccion(request):
+    return render(request, 'produccion.html')
+
+
+def galeria(request):
+    return render(request, 'galeria.html')
+
+
 def peticion(request):
     """Procesa una petición y guarda los datos en la BBDD"""
     if request.method == 'POST':

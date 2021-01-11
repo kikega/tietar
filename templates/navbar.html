@@ -14,10 +14,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#">Producción</a>
+                    <a href="{% url 'produccion' %}">Producción</a>
                 </li>
                 <li>
-                    <a href="#">Servicios</a>
+                    <a href="{% url 'servicios' %}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{% url 'galeria' %}">Galeria</a>
                 </li>
                 <li>
                     <a href="#modalContacto" data-toggle="modal">Contacto</a>

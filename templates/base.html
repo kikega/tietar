@@ -36,9 +36,153 @@
     {% block header %}
     {% endblock header %}
 
+
+    <main>
     {% block main %}
     {% endblock main %}
     
+    <!-- Peticion Modal Contacto-->
+    <div class="modal fade" id="modalContacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Formulario de contacto</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Escríbanos y nos pondremos en contacto con usted</h4>
+                    <form action="{% url 'peticion' %}" method="post" role="form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="texto">Texto</label>
+                            <textarea name="texto" class="form-control" id="texto" rows="5" placeholder="Comentario"></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="emailcomercial">Acepto recibir información comercial
+                            </label>
+                            <label>
+                            <input type="checkbox" name="consentimiento" required> Antes de enviar tu información, lee y acepta la <a href="#collapseLey" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLey">Información básica sobre la Ley de Protección de Datos</a>
+                            </label>
+                            <div class="collapse panel-collapse" id="collapseLey" aria-labelledby="headingOne">
+                                <div class="panel-body collapse.in">
+                                    <p>Hortícola Reipra te informa, que los datos de caracter temporal que proporciones rellenando el presente formulario, serán tratados de forma exclusiva por Hortícola Reipra, para el envío de información, promociones de productos y/o servicios.</p> 
+                                    <p>La legitimación, se realiza a través del consentimiento del interesado. El hecho de la no introducción de los datos que solicitamos en el presente formulario, podrá tener como consecuencia, que no podamos atender dicha solicitud. Podrás ejercer tus derechos de acceso, rectificación y supresión de los datos en <a href="mailto:supervisor@gmail.com">supervisor@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>                     
+                    </form>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <!-- Fin petición modal -->
+
+    <!-- Petición modal Aviso Legal -->
+    <div class="modal fade" id="modalAvisolegal" tabindex="-1" role="dialog" aria-labelledby="avisolegalModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="avisolegalModalLabel">Aviso legal</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Aviso legal</h4>
+                    <p>De acuerdo con lo establecido en el Reglamento General de Protección de Datos, le informamos que trataremos sus datos personales con la finalidad de:</p>
+                    <p>Los datos personales proporcionados se conservarán, mientras se mantenga la relación mercantil, no se solicite su supresión por el interesado, o durante 1 año a partir de la última confirmación de interés, o durante el tiempo necesario para cumplir con las obligaciones legales. La empresa NO tomará decisiones automatizadas. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal y los trataremos en base a su consentimiento.</p>
+                    <p>Asimismo, le informamos de la posibilidad de ejercer los siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión u olvido, limitación, oposición, portabilidad y a retirar el consentimiento prestado, para ello podrá enviar un email a: administrador@reinadeltietar.com</p>
+                    <p>Además, el interesado puede dirigirse a la Autoridad de Control en materia de Protección de Datos competente para obtener información adicional o presentar una reclamación.</p>
+                    <p>Datos identificativos del responsable:</p>
+                    <p>Hortícolas Reipra S.L. CIF B-10.498.053 R.G.S.A 2.17218/CC</p>
+                    <p>CONSENTIMIENTO PARA EL FORMULARIO DE RECOGIDA DE DATOS</p>
+                    <p>La finalidad y uso previsto tanto de los datos en sí mismos como de su tratamiento, es prestarle el servicio solicitado o entregarle el producto adquirido.</p>
+                </div> 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <!-- Petición modal Aviso Legal -->
+
+    <!-- Petición modal Política de privacidad -->
+    <div class="modal fade" id="modalPrivacidad" tabindex="-1" role="dialog" aria-labelledby="privacidadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="privacidadModalLabel">Política de Privacidad</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Política de privacidad</h4>
+                    <p>El presente Política de Privacidad establece los términos en que Hortícolas Reipra S.L. usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p>
+                    <h4>Información que es recogida</h4>
+                    <p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre, información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.</p>
+                    <h4>Uso de la información recogida</h4>
+                    <p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.</p>
+                    <h4>Control de su información personal</h4>
+                    <p>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.</p>
+                    <p>Puede marcar o desmarcar la opción de recibir información por correo electrónico.  En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.</p>
+                    <p>Esta empresa no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p>
+                </div> 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <!-- Petición modal Política de privacidad -->
+
+    <!-- Petición modal Política de cookies -->
+    <div class="modal fade" id="modalCookies" tabindex="-1" role="dialog" aria-labelledby="cookiesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="cookiesModalLabel">Política de Cookies</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Cookies</h4>
+                    <p>Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas las web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.</p>
+                    <p>Las cookies se almacenan en el equipo terminal del usuario (ordenador o dispositivo móvil) y recopilan información al visitar nuestra página web, con la finalidad de mejorar la usabilidad de las mismas, conocer lo hábitos o necesidades de navegación de los usuarios para poder adaptarse a los mismo, así como obtener información con fines estadísticos.  En el caso de aquellos usuarios que ya sean clientes de la entidad, la información recabada con las cookies servirá también para su identificación al acceder a las distintas herramientas que la entidad pone a su disposición para la gestión de los servicios.</p>
+                    <p>La presente Política de Cookies será de aplicación a aquellos usuarios que voluntariamente visitan las páginas web de la entidad, cumplimentan formularios de recogida de datos, acceden a las herramientas que la entidad pone a disposición de sus clientes para gestionar sus servicios, o utilizan cualquier otro servicio presente en el sitio web que implique la comunicación de datos a la entidad, o el acceso a datos por la entidad, para la prestación de sus servicios.</p>
+                    <p>La entidad informa a los usuarios de sus páginas web, de la existencia de cookies y pone a su disposición la presente Política con la finalidad de informarles acerca del uso y del objeto de las mismas. El hecho de continuar la navegación a través de sus páginas, supone el conocimiento y la aceptación de la presente Política por parte de dichos usuarios.</p>
+                    <h4>Modifica tu configuración</h4>
+                    <p>Puedes permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones de tu navegador de Internet. En caso de que no permitas la instalación de cookies en tu navegador es posible que no puedas acceder a algunos de los servicios y que tu experiencia en nuestra web pueda resultar menos satisfactoria. </p>
+                </div> 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <!-- Petición modal Política de cookies -->
+    </main>
+
     {% include 'footer.html' %}
         
     <!-- jQuery -->

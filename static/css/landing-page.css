@@ -257,6 +257,10 @@ footer {
     color: #c5faa3;
 }
 
+footer a {
+    color: white;
+}
+
 p.copyright {
     margin: 15px 0 0;
 }
