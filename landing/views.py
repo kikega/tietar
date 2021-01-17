@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from landing.models import Peticion
+from landing.models import Peticion, Galeria_fotos
 
 
 def index_view(request):
@@ -17,7 +17,8 @@ def produccion(request):
 
 
 def galeria(request):
-    return render(request, 'galeria.html')
+    fotos = Galeria_fotos.objects.all()
+    return render(request, 'galeria.html', {'fotos':fotos})
 
 
 def peticion(request):
@@ -28,6 +29,10 @@ def peticion(request):
         peticion.telefono = request.POST['telefono']
         peticion.email = request.POST['email']
         peticion.texto = request.POST['texto']
+        if request.POST['emailcomercial'] == 'on':
+            peticion.emailcomercial = True
+        else:
+            peticion.emailcomercial = False
         if request.POST['consentimiento'] == 'on':
             peticion.consentimiento = True
         peticion.save()

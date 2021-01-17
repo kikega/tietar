@@ -8,4 +8,9 @@ class PeticionAdmin(admin.ModelAdmin):
     list_filter = ('atendida',)
 
 
+class GaleriaAdmin(admin.ModelAdmin):
+    list_display = ('fecha', 'nombre', 'descripcion')
+
+
 admin.site.register(Peticion, PeticionAdmin)
+admin.site.register(Galeria_fotos, GaleriaAdmin)
