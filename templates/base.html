@@ -25,6 +25,9 @@
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' %}" rel="stylesheet" type="text/css">
 
+    <!-- CSS para el banner de Ley de cookies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -184,6 +187,17 @@
         </div>
     </div>
     <!-- Petición modal Política de cookies -->
+
+    <!-- START Bootstrap-Cookie-Alert -->
+    <div class="alert text-center cookiealert" role="alert">
+        <b>Esta página web usa cookies</b> &#x1F36A; Las cookies de este sitio web, se usan para mejorar la experiencia de sitio. <a href="#modalCookies" data-toggle="modal">Política de cookies</a>
+    
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+            Aceptar
+        </button>
+    </div>
+    <!-- END Bootstrap-Cookie-Alert -->
+
     </main>
 
     {% include 'footer.html' %}
@@ -197,6 +211,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
+    <!-- Banner Ley de cookies -->
+    <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
     
     {% block scripts %}
         
