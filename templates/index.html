@@ -102,57 +102,12 @@
                 </div>
                 <div class="row">
                     <div class="card-footer text-center">
-                        <a href="#" class="btn btn-success">Saber más!</a>
+                        <a href="{% url 'produccion' %}" class="btn btn-success">Saber más!</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Formulario de contacto -->
-        <!-- <section class="content-section-b">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-sm-6 col-sm-offset-3">
-                        <h2>Formulario de contacto</h2>
-                        <h3>Escríbanos y nos pondremos en contacto con usted</h3>
-                        <form action="{% url 'peticion' %}" method="post" role="form">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefono">Teléfono</label>
-                                <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Nombre">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="texto">Texto</label>
-                                <textarea name="texto" class="form-control" id="texto" rows="5" placeholder="Comentario"></textarea>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                <input type="checkbox" name="consentimiento" required>Antes de enviar tu información, lee y acepta la <a href="#collapseLey" data-toggle="collapse" aria-expanded="false" aria-controls="collapseLey">Información básica sobre la Ley de Protección de Datos</a>  
-                                </label>
-                                <div class="collapse panel-collapse" id="collapseLey" aria-labelledby="headingOne">
-                                    <div class="panel-body collapse.in">
-                                        <p>Hortícola Reipra te informa, que los datos de caracter temporal que proporciones rellenando el presente formulario, serán tratados de forma exclusiva por Hortícola Reipra, para el envío de información, promociones de productos y/o servicios. La legitimación, se realiza a través del consentimiento del interesado. El hecho de la no introducción de los datos que solicitamos en el presente formulario, podrá tener como consecuencia, que no podamos atender dicha solicitud. Podrás ejercer tus derechos de acceso, rectificación y supresión de los datos en <a href="mailto:supervisor@gmail.com">supervisor@gmail.com</a>. Puedes consultar la información adicional y detallada sobre la protección da datos en <a href="#">Política de privacidad</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-success">Enviar</button>
-                            </div>                     
-                        </form>
-                    </div>                   
-                </div>
-            </div>
-        </section> -->
-        <!-- Fin formulaio de contacto -->
 
     {% endblock main %}
 
