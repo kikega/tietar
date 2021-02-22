@@ -11,8 +11,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sub-message">
-                        <h1>Reina del Tiétar</h1>                
-                        <h3>Espárrago verde</h3>
+                        <h1>Espárrago Verde</h1>
+                        <h3>Reina del Tiétar</h3>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
             {% for foto in fotos %}
             <div class="col-xs-6 col-md-3">
                 <a href="{{ foto.imagen.url }}" data-lightbox="roadtrip"  data-title="{{ foto.nombre }}" class="thumbnail">
-                    <img src="{{ foto.imagen.url }}" alt="Foto de galeria">
+                    <img src="{{ foto.imagen.url }}" alt="{{ foto.nombre }}">
                 </a>
                 <div class="caption">
                     <p>{{ foto.nombre }}</p>
