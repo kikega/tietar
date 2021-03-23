@@ -4,6 +4,7 @@ from django.urls import reverse
 class StaticViewSitemap(sitemaps.Sitemap):
     priority = 0.5
     changefreq = 'never'
+    protocol = 'http'
 
     def items(self):
         return ['index', 'produccion', 'servicios', 'galeria']
